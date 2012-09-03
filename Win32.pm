@@ -21,7 +21,7 @@ if (IsWin32()) {
 	eval('use Win32::Console');
 	eval('use Win32API::File');
 } else {
-	eval('use Term::ReadPassword');
+	eval('require Term::ReadPassword');
 }
 
 # The maximum amount of data for the input buffer to hold
