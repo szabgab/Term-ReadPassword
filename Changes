@@ -10,3 +10,11 @@ Ver.0.02  2005/12/20
   - The namespace and the function name were changed.
     Term::ReadPasswd::read_passwd -> Term::ReadPassword::Win32::read_password
 
+Ver.0.03  2012/09/
+  - Fix RT 79144 - listing prerequistes in Makefile.PL
+  -     RT 65402 - probably fixed by avove
+  - Fix RT 19070 - now restoring STDIN
+
+  - Reogranize directory layout
+  - use Test::More
+
