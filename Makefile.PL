@@ -22,5 +22,10 @@ WriteMakefile(
 	'PREREQ_PM'    => {
 		'Test::More' => 0,
 		%prereqs,
-	}
+	},
+	'META_MERGE'   => {
+		resources => {
+			repository  =>  'https://github.com/szabgab/Term-ReadPassword-Win32',
+		},
+	},
 );
