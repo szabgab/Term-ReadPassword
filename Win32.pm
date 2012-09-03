@@ -149,6 +149,9 @@ keyin:
 	Win32API::File::CloseHandle($CONOUT->{'handle'});
 	$CONOUT->{'handle'} = $hStderr;
 	
+	$CONOUT = undef;
+	close STDIN;
+	open STDIN, '+<CONIN$';
 	return $input;
 }
 
