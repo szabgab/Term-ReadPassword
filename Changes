@@ -1,0 +1,12 @@
+History for Term::ReadPassword::Win32
+
+Ver.0.00  2005/12/15
+  - The first release.
+
+Ver.0.01  2005/12/18
+  - The function name ReadPasswd was changed to read_passwd.
+
+Ver.0.02  2005/12/20
+  - The namespace and the function name were changed.
+    Term::ReadPasswd::read_passwd -> Term::ReadPassword::Win32::read_password
+

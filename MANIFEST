@@ -1,0 +1,9 @@
+README
+README.ja
+Changes
+MANIFEST
+Makefile.PL
+Win32.pm
+Win32_ja.pod
+t/1_loadtest.t
+META.yml
