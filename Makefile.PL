@@ -18,7 +18,7 @@ if ($^O eq 'MSWin32') {
 
 WriteMakefile(
 	'NAME'         => 'Term::ReadPassword::Win32',
-	'VERSION_FROM' => 'Win32.pm', # finds $VERSION
+	'VERSION_FROM' => 'lib/Term/ReadPassword/Win32.pm', # finds $VERSION
 	'PREREQ_PM'    => {
 		'Test::More' => 0,
 		%prereqs,
