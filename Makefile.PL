@@ -1,5 +1,26 @@
+use strict;
+use warnings;
+
 use ExtUtils::MakeMaker;
+my %prereqs;
+if ($^O eq 'MSWin32') {
+	%prereqs = (
+		'Win32'          => 0,
+		'Win32::Console' => 0,
+		'Win32API::File' => 0,
+	);
+} else {
+	%prereqs = (
+		'Term::ReadPassword' => 0,
+	);
+}
+
+
 WriteMakefile(
-	'NAME'	=> 'Term::ReadPassword::Win32',
+	'NAME'         => 'Term::ReadPassword::Win32',
 	'VERSION_FROM' => 'Win32.pm', # finds $VERSION
+	'PREREQ_PM'    => {
+		'Test::More' => 0,
+		%prereqs,
+	}
 );
