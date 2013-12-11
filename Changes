@@ -1,5 +1,9 @@
 History for Term::ReadPassword::Win32
 
+0.04
+
+    - Avoid including the MYMETA files (#91253)
+
 Ver.0.00  2005/12/15
   - The first release.
 
