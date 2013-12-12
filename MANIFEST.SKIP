@@ -13,3 +13,4 @@ Makefile$
 ^.*\.swp$
 ^.*~$
 MYMETA*
+Term-ReadPassword-Win32*
