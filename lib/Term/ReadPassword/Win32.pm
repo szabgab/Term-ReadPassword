@@ -14,7 +14,7 @@ use vars qw(
 @EXPORT = qw(read_password);
 @EXPORT_OK = qw(ReadPasswd read_passwd);
 
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 if (IsWin32()) {
 	eval('use Win32');
