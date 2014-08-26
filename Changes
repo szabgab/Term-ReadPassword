@@ -1,6 +1,10 @@
 History for Term::ReadPassword::Win32
 
-0.04
+0.05 2014.08.26
+    - Link to GitHub from META files.
+    - dos2unix files
+
+0.04 2013.12.12
 
     - Avoid including the MYMETA files (#91253)
     - Move Japanese POD document to lib/POD2. (Tatsuhiko Miyagawa)
@@ -12,10 +16,10 @@ History for Term::ReadPassword::Win32
     - Fix RT 79144 - listing prerequistes in Makefile.PL
     -     RT 65402 - probably fixed by avove
     - Fix RT 19070 - now restoring STDIN
-  
+
     - Reogranize directory layout
     - use Test::More
-  
+
     - New maintainer: Gabor Szabo (SZABGAB)
 
 0.02  2005.12.20
