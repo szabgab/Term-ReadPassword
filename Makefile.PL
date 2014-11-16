@@ -9,16 +9,16 @@ if ($^O eq 'MSWin32') {
 		'Win32::Console' => 0,
 		'Win32API::File' => 0,
 	);
-} else {
-	%prereqs = (
-		'Term::ReadPassword' => 0,
-	);
+#} else {
+#	%prereqs = (
+#		'Term::ReadPassword' => 0,
+#	);
 }
 
 
 WriteMakefile(
-	'NAME'         => 'Term::ReadPassword::Win32',
-	'VERSION_FROM' => 'lib/Term/ReadPassword/Win32.pm',
+	'NAME'         => 'Term::ReadPassword',
+	'VERSION_FROM' => 'lib/Term/ReadPassword.pm',
 	'LICENSE'      => 'perl',
 	'PREREQ_PM'    => {
 		'Test::More' => 0,
