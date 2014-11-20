@@ -1,15 +1,15 @@
 #!perl
 
+
+use Test::More;
+plan skip_all => 'This test does not work on Windows' if $^O eq 'MSWin32';
+plan skip_all => 'Automated testing detected (AUTOMATED_TESTING)' if $ENV{AUTOMATED_TESTING};
+
+plan tests => 1;
+
 use Term::ReadPassword;
 
-if ($ENV{AUTOMATED_TESTING}) {
-    print "1..0 # Skip: Automated testing detected (AUTOMATED_TESTING) \n";
-    exit;
-}
-
 $Term::ReadPassword::USE_STARS = $ENV{USE_STARS};
-
-print "1..1\n";
 
 # Let's open the TTY (rather than STDOUT) if we can
 # local(*TTY, *TTYOUT);
@@ -38,7 +38,7 @@ INTERACTIVE: {
     if (not defined $new_pw) {
       print TTYOUT "# Time's up!\n";
       print TTYOUT "# Were you scared, or are you merely an automated test?\n";
-      print "ok 1\n";
+      pass;
       last INTERACTIVE;
     } elsif ($new_pw eq '') {
       print TTYOUT "# No empty passwords allowed.\n";
@@ -46,7 +46,7 @@ INTERACTIVE: {
       redo;
     } elsif ($new_pw =~ /^ +$/) {
       print TTYOUT "# Skipping the test!\n";
-      print "ok 1\n";
+      pass;
       last INTERACTIVE;
     } elsif ($new_pw =~ /([^\x20-\x7E])/) {
       my $bad = unpack "H*", $1;
@@ -71,7 +71,7 @@ INTERACTIVE: {
     redo unless defined $password;
     if ($password eq $secret) {
       print TTYOUT "# Access granted.\n";
-      print "ok 1\n";
+      pass;
       last;
     } else {
       print TTYOUT "# Access denied.\n";
