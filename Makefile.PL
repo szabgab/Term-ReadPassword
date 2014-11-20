@@ -9,14 +9,9 @@ if ($^O eq 'MSWin32') {
 		'Win32::Console' => 0,
 		'Win32API::File' => 0,
 	);
-#} else {
-#	%prereqs = (
-#		'Term::ReadPassword' => 0,
-#	);
 }
 
-
-WriteMakefile(
+my %conf = (
 	'NAME'         => 'Term::ReadPassword',
 	'VERSION_FROM' => 'lib/Term/ReadPassword.pm',
 	'LICENSE'      => 'perl',
@@ -24,9 +19,24 @@ WriteMakefile(
 		'Test::More' => 0,
 		%prereqs,
 	},
-	'META_MERGE'   => {
-		resources => {
-			repository  =>  'https://github.com/szabgab/Term-ReadPassword-Win32',
-		},
-	},
 );
+
+if (eval { ExtUtils::MakeMaker->VERSION(6.46) }) {
+	$conf{META_MERGE} = {
+		'meta-spec' => { version => 2 },
+		resources => {
+			repository => {
+				type       => 'git',
+				url        => 'http://github.com/szabgab/Term-ReadPassword.git',
+				web        => 'http://github.com/szabgab/Term-ReadPassword',
+				license    => 'http://dev.perl.org/licenses/',
+			},
+			bugtracker => {
+				web        => 'http://github.com/szabgab/Term-ReadPassword/issues',
+			},
+		},
+	};
+}
+
+WriteMakefile(%conf);
+
