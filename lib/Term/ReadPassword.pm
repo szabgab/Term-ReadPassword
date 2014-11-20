@@ -20,14 +20,14 @@ my %CC_FIELDS = (
 );
 
 use vars qw(
-	@ISA 
+	@ISA
 	$ALLOW_STDIN %SPECIAL $SUPPRESS_NEWLINE $INPUT_LIMIT
 	$USE_STARS $STAR_STRING $UNSTAR_STRING
 );
 
 require Exporter;
 
-@ISA    = qw(Exporter);
+@ISA = qw(Exporter);
 our @EXPORT = qw(
 	read_password
 );

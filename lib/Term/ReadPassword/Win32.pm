@@ -11,7 +11,7 @@ use vars qw(
 	$USE_STARS $STAR_STRING $UNSTAR_STRING
 );
 
-@ISA       = qw(Exporter);
+@ISA = qw(Exporter);
 our @EXPORT    = qw(read_password);
 our @EXPORT_OK = qw(ReadPasswd read_passwd);
 

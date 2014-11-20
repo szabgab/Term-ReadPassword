@@ -2,6 +2,7 @@ History for Term::ReadPassword
 
 0.11_02 2014.11.20
    - Skip tests that fail on Windows.
+   - Perl::Tidy code
 
 
 0.11_01 2014.11.16
