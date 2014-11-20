@@ -58,8 +58,8 @@ sub read_password {
 
 	$idle_limit *= 1000;    # sec -> msec
 
-	my $CONIN  = new Win32::Console( Win32::Console::STD_INPUT_HANDLE() );
-	my $CONOUT = new Win32::Console( Win32::Console::STD_ERROR_HANDLE() );
+	my $CONIN  = Win32::Console->new( Win32::Console::STD_INPUT_HANDLE() );
+	my $CONOUT = Win32::Console->new( Win32::Console::STD_ERROR_HANDLE() );
 
 	# make sure that input and output are not redirected
 	my $hStdin = $CONIN->{'handle'};
