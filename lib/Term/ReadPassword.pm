@@ -20,7 +20,7 @@ my %CC_FIELDS = (
 );
 
 use vars qw(
-	$VERSION @ISA @EXPORT @EXPORT_OK
+	@ISA 
 	$ALLOW_STDIN %SPECIAL $SUPPRESS_NEWLINE $INPUT_LIMIT
 	$USE_STARS $STAR_STRING $UNSTAR_STRING
 );
@@ -28,10 +28,10 @@ use vars qw(
 require Exporter;
 
 @ISA    = qw(Exporter);
-@EXPORT = qw(
+our @EXPORT = qw(
 	read_password
 );
-$VERSION = '0.11_01';
+our $VERSION = '0.11_02';
 
 # The special characters in the input stream
 %SPECIAL = (

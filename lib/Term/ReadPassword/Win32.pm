@@ -6,16 +6,16 @@ use warnings;
 require Exporter;
 
 use vars qw(
-	$VERSION @ISA @EXPORT @EXPORT_OK
+	@ISA
 	$SUPPRESS_NEWLINE $INPUT_LIMIT
 	$USE_STARS $STAR_STRING $UNSTAR_STRING
 );
 
 @ISA       = qw(Exporter);
-@EXPORT    = qw(read_password);
-@EXPORT_OK = qw(ReadPasswd read_passwd);
+our @EXPORT    = qw(read_password);
+our @EXPORT_OK = qw(ReadPasswd read_passwd);
 
-$VERSION = '0.11_01';
+our $VERSION = '0.11_02';
 
 if ( IsWin32() ) {
 	eval('use Win32');
