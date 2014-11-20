@@ -1,5 +1,9 @@
 History for Term::ReadPassword
 
+0.11_02 2014.11.20
+   - Skip tests that fail on Windows.
+
+
 0.11_01 2014.11.16
    - merge the Term-ReadPassword-Win32 distribution into the
      Term-ReadPassword distribution and release them together.
