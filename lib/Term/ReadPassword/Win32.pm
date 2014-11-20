@@ -3,15 +3,13 @@ package Term::ReadPassword::Win32;
 use strict;
 use warnings;
 
-require Exporter;
+use Exporter qw(import);
 
 use vars qw(
-	@ISA
 	$SUPPRESS_NEWLINE $INPUT_LIMIT
 	$USE_STARS $STAR_STRING $UNSTAR_STRING
 );
 
-@ISA = qw(Exporter);
 our @EXPORT    = qw(read_password);
 our @EXPORT_OK = qw(ReadPasswd read_passwd);
 
