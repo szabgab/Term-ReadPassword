@@ -1,5 +1,6 @@
 *.swp
 *~
+/.tidyall.d/
 MANIFEST
 MANIFEST.bak
 MYMETA.json
@@ -8,4 +9,3 @@ Makefile
 Term-*
 blib/
 pm_to_blib
-/.tidyall.d/
