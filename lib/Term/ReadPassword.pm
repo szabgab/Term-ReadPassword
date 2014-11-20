@@ -1,6 +1,8 @@
 package Term::ReadPassword;
 
 use strict;
+use warnings;
+
 use Term::ReadLine;
 use POSIX qw(:termios_h);
 my %CC_FIELDS = (

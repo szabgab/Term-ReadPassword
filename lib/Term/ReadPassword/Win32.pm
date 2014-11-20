@@ -1,6 +1,7 @@
 package Term::ReadPassword::Win32;
 
 use strict;
+use warnings;
 
 require Exporter;
 
