@@ -323,6 +323,8 @@ You can influence behaviour further through package variables.
 
 No newlines: set C<$Term::ReadPassword::Win32::SUPPRESS_NEWLINE> to a true value.
 
+=back
+
 =head1 BUGS
 
 Windows users will want Term::ReadPassword::Win32.
