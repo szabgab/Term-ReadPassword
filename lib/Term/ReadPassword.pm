@@ -310,6 +310,19 @@ appears will be discarded. And whether the input operation terminates
 normally or not, a newline character will be printed, so that the cursor
 will not remain on the line after the prompt. 
 
+=head1 OPTIONS
+
+This is an incomplete list.
+But you might find, what you are looking for.
+
+You can influence behaviour further through package variables.
+
+=over
+
+=item *
+
+No newlines: set C<$Term::ReadPassword::Win32::SUPPRESS_NEWLINE> to a true value.
+
 =head1 BUGS
 
 Windows users will want Term::ReadPassword::Win32.
